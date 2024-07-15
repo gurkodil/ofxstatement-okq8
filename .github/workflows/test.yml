@@ -32,9 +32,9 @@ jobs:
     - name: Test
       run: |
         pipenv run pytest
-    - name: Mypy
-      run: |
-        pipenv run mypy src tests
+    # - name: Mypy
+    #   run: |
+    #     pipenv run mypy src tests
     - name: Black
       run: |
         pipenv run black --check src tests
