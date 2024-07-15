@@ -37,8 +37,10 @@ class OKQ8Parser(StatementParser[Any]):
         self.filename = filename
         self.sheet = load_workbook(filename=filename, read_only=True).active
         # TODO: Config?
-        try: locale.setlocale(locale.LC_TIME, "sv_SE.UTF-8")
-        except: pass
+        try:
+            locale.setlocale(locale.LC_TIME, "sv_SE.UTF-8")
+        except:
+            pass
 
     def parse(self) -> Statement:
         """Main entry point for parsers
